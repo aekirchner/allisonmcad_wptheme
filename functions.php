@@ -133,7 +133,7 @@ add_action( 'widgets_init', 'allisonmcad_wptheme_widgets_init' );
 function allisonmcad_wptheme_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
+	//wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -144,6 +144,13 @@ function allisonmcad_wptheme_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'allisonmcad_wptheme_scripts' );
+
+function load_fonts() {
+	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Open+Sans|Vollkorn|Droid+Sans');
+	wp_enqueue_style( 'googleFonts');
+	}
+ 
+	add_action('wp_enqueue_scripts', 'load_fonts');
 
 /**
  * Implement the Custom Header feature

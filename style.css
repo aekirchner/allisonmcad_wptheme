@@ -22,6 +22,17 @@ and Blueprint http://www.blueprintcss.org/
 /* =Reset
 -------------------------------------------------------------- */
 
+* {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	margin:0;
+}
+
+html, body {
+	height:100%;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -410,6 +421,11 @@ a:active {
 /* =Content
 ----------------------------------------------- */
 
+.site {
+	margin:0;
+	padding:0;
+}
+
 .sticky {
 }
 .hentry {
@@ -446,6 +462,14 @@ a:active {
 
 /* =Media
 ----------------------------------------------- */
+
+body.home {
+	background: url('http://www.aekirchner.com/wp-content/uploads/2013/03/parlor.gif') no-repeat center center fixed;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
 
 .site-header img,
 .entry-content img,
@@ -558,6 +582,91 @@ object {
 	display: none;
 }
 
+.widget-area a {
+	color:white;
+	text-decoration:none;
+}
+
+.widget-area .widget_sp_image {
+	min-height:80px;
+	margin-bottom:0;
+}
+
+.widget-area .menu {
+	font-size:118.75%;
+	list-style:none;
+	margin:0;
+	padding:0;
+	border-top:5px solid white;
+	border-bottom:5px solid white;
+	min-height:125px;
+}
+
+.widget-area .menu li {
+	display:inline;
+	float:left;
+}
+
+.widget-area .menu li:nth-child(2n+2) {
+	margin-left:.5em;
+}
+
+#text-2, #text-3 {
+	padding-bottom:15px;
+	border-bottom:5px solid white;
+}
+
+.textwidget h2 {
+	font-size:125%;
+}
+
+.textwidget p {
+	font-size:62.5%;
+}
+
+#text-4 {
+	width:56%;
+	float:left;
+	margin:0;
+}
+
+#text-5 {
+	width:42.5%;
+	float:left;
+	padding-left:2.5%;
+	border:none;
+}
+
+#text-5 img {
+	max-width:45%;
+	margin:0;
+	padding:0;
+}
+
+
+/* =Layout
+----------------------------------------------- */
+
+.content-area {
+	float:right;
+	width:85%;
+}
+
+.widget-area {
+	float:left;
+	width:15%;
+	padding-left:2em;
+	font-family:'Droid Sans', sans-serif;
+	color:white;
+}
+
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -4em;
+}
+
 /* =Infinite Scroll
 ----------------------------------------------- */
 
@@ -571,4 +680,36 @@ object {
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 .infinity-end.neverending #colophon {
 	display: block;
+}
+
+/* =Footer
+----------------------------------------------- */
+
+.footer, .push {
+	height:2em;
+	clear:both;
+	text-align:right;
+	padding-right:2em;
+}
+
+.site-footer p {
+	font-family:'Open Sans', sans-serif;
+	font-size:62.5%;
+	color:white;
+}
+
+/* =Clearfix
+----------------------------------------------- */
+
+.clearfix:before, .clearfix:after {
+	content:" "; 
+	display:table;
+}
+
+.clearfix:after {
+	clear:both;
+}
+
+.clearfix {
+	*zoom:1;
 }
