@@ -471,6 +471,14 @@ body.home {
 	background-size: cover;
 }
 
+body.page {
+	background: url('http://www.aekirchner.com/wp-content/uploads/2013/03/llbg.gif') no-repeat center center fixed;
+	-mox-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 .site-header img,
 .entry-content img,
 .comment-content img,
