@@ -471,7 +471,7 @@ body.home {
 	background-size: cover;
 }
 
-body.page {
+body.page, body.single {
 	background: url('http://www.aekirchner.com/wp-content/uploads/2013/03/llbg.gif') no-repeat center center fixed;
 	-mox-background-size: cover;
 	-webkit-background-size: cover;
@@ -658,12 +658,16 @@ object {
 .content-area {
 	float:right;
 	width:85%;
+	position:relative;
+	top:-600px;
+	padding-left:2em;
 }
 
 .widget-area {
 	float:left;
 	width:15%;
 	padding-left:2em;
+	margin-right:1em;
 	font-family:'Droid Sans', sans-serif;
 	color:white;
 }
