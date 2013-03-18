@@ -15,16 +15,20 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
             
         <div id="artist-wrapper">
-            	<p>test test test</p>
-            	<h1><?php the_field('artist_name'); ?></h1>
+            	<h1>{<?php the_field('artist_name'); ?>}</h1>
                 	
-            <?php if(get_field('artist_content')); ?>
+            <?php if(get_field('artist_content')): ?>
             
-            <div class="artist-content">
-            	<?php while(the_repeater_field('artist_content')); ?>
-                	<p><?php the_sub_field('artist_bio'); ?></p>
-                    <img src="<?php the_sub_field('artist_picture'); ?>" alt="<?php the_sub_field('alt'); ?>" />
-                    <p><?php the_sub_field('artist_picture_caption'); ?></p>
+            <div id="artist-content" class="clearfix">
+            	<?php while(the_repeater_field('artist_content')): ?>
+                	<div id="artist-bio">
+                    	<p><?php the_sub_field('artist_bio'); ?></p>
+                    </div>
+                    
+                    <div id="artist-sidebar">
+                    	<img src="<?php the_sub_field('artist_picture'); ?>" alt="<?php the_sub_field('alt'); ?>" />
+                    	<p><?php the_sub_field('artist_picture_caption'); ?></p>
+                    </div>
                 <?php endwhile; ?>
             </div>
             
@@ -33,7 +37,7 @@ get_header(); ?>
 			
 			<?php if(get_field('artist_portfolio')): ?>
 
-			<div class="artist-portfolio-images">   
+			<div id="artist-portfolio-images">   
 				<?php while(the_repeater_field('artist_portfolio')): ?>
 					<img src="<?php the_sub_field('artist_portfolio_image_1'); ?>" alt="<?php the_sub_field('alt'); ?>" />
 					<img src="<?php the_sub_field('artist_portfolio_image_2'); ?>" alt="<?php the_sub_field('alt'); ?>" />

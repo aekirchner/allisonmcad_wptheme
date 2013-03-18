@@ -450,6 +450,48 @@ a:active {
 	margin: 0 0 1.5em;
 }
 
+#artist-wrapper {
+	color:white;
+	padding-left:1em;
+}
+
+#artist-wrapper h1 {
+	font-family:'Vollkorn', serif;
+	font-size:275%;
+	text-transform:uppercase;
+}
+
+#artist-bio {
+	padding-left:1em;
+	float:left;
+	width:75%;
+	margin-right:1em;
+	font-family:'Droid Sans', sans-serif;
+}
+
+#artist-sidebar {
+	width:15%;
+	float:left;
+}
+
+#artist-sidebar p {
+	font-family:'Droid Sans', sans-serif;
+	font-size:87.5%;
+}
+
+#artist-sidebar a {
+	color:white;
+	text-decoration:none;
+}
+
+#artist-portfolio-images {
+	padding-left:1em;
+}
+
+#artist-portfolio-images img {
+	margin-right: .7em;
+}
+	
 
 /* =Asides
 ----------------------------------------------- */
@@ -563,6 +605,7 @@ object {
 	text-align: right;
 	width: 50%;
 }
+	
 
 /* =Comments
 ----------------------------------------------- */
@@ -595,6 +638,14 @@ object {
 	text-decoration:none;
 }
 
+.widget-area a:visited {
+	color:#6d6d6d;
+}
+
+ul.sub-menu a:visited {
+	color:white;
+}
+
 .widget-area .widget_sp_image {
 	min-height:80px;
 	margin-bottom:0;
@@ -617,6 +668,19 @@ object {
 
 .widget-area .menu li:nth-child(2n+2) {
 	margin-left:.5em;
+}
+
+ul.sub-menu {
+	background-color:#999;
+	position:absolute;
+	top:110px;
+	left:80px;
+	display:block;
+	max-width:150px;
+	white-space:nowrap;
+	padding:1em;
+	margin:0;
+	text-align:left;
 }
 
 #text-2, #text-3 {
