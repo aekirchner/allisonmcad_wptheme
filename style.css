@@ -673,14 +673,19 @@ ul.sub-menu a:visited {
 ul.sub-menu {
 	background-color:#999;
 	position:absolute;
-	top:110px;
-	left:80px;
+	top:80px;
+	left:90px;
 	display:block;
 	max-width:150px;
 	white-space:nowrap;
 	padding:1em;
 	margin:0;
 	text-align:left;
+	z-index:80;
+}
+
+#menu-item-44 {
+	margin-left:0px;
 }
 
 #text-2, #text-3 {
@@ -729,7 +734,7 @@ ul.sub-menu {
 
 .widget-area {
 	float:left;
-	width:15%;
+	width:200px;
 	padding-left:2em;
 	margin-right:1em;
 	font-family:'Droid Sans', sans-serif;
